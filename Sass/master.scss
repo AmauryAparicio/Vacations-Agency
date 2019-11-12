@@ -1,0 +1,56 @@
+/* Variables y Mixins */
+@import "_mixins/_fonts.scss";
+@import "_variables/_colors.scss";
+@import "_mixins/_devices.scss";
+/* Parciales */
+@import "_partials/_header.scss";
+@import "_partials/_content.scss";
+@import "_partials/_footer.scss";
+/* Componentes */
+@import "_components/_buttons.scss";
+/*----------------------------------*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+img{
+  max-width: 100%;
+  vertical-align: top;
+}
+body, html{
+  font-size: 10px;
+  @include font-regular();
+}
+.container{
+  width: 90%;
+  max-width: 117rem;
+  margin: 0 auto;
+}
+.section-title-container{
+  text-align: center;
+  h2{
+    font-size: 3.1rem;
+    color: $color-primario;
+    line-height: 3.1rem;
+    margin-bottom: 1rem;
+    @include mobile{
+      font-size: 2.1rem;
+    }
+  }
+  p{
+    font-size: 1.6rem;
+    color: $color-text-light;
+    @include font-light();
+  }
+}
+.page-section{
+  padding: 9rem 0;
+}
